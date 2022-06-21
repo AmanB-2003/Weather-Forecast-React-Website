@@ -7,10 +7,11 @@ import Graph from './Graph';
 function App() {
   return (
     <div className="App">
-      <label>Your City </label>
-      <input type="text" placeholder="London" ></input>
+      {/* <label>Your City </label>  // feature to be developed 
+      <input type="text" placeholder="London" ></input> */}
 
       <Temp></Temp>
+      
       
     </div>
 

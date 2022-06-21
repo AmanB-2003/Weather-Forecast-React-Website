@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import Graph from "./Graph";
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 
 let index = -2;       //can change value inside function  (global variable)
+let expt ;
 
 function createEntry(data){
     index = index + 1;
-    let date = data.dt_txt.substring(0,10);
-   return <div>
-   { ((index % 8) === 0  ) && <Card 
+    let date = data.dt_txt.substring(6,10);
+   
+    if((index % 8) === 0  ){
+        return <Card 
    key={data.dt}
    date={date}
    image = {`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
    humidity={data.main.humidity} 
-   />}
-   </div>
+   />
+   }
+  
+   
 }
 
 
@@ -94,7 +99,7 @@ function Temp() {
         }
 
  
-
+         expt = dataa.info;
         dataa.loaded !== false ? console.log(dataa) : console.log("ERROR!!!!Couldn't load data :(");
 
 
@@ -102,23 +107,42 @@ function Temp() {
         {
         dataa.loaded !== false  &&
         <div>
+        <div className="row">
+        <div className="card border-0 col-sm-4" >
+        <div className="card-body">
         <p>{d} {t}</p>
-        <a href={link} >link</a>
-        <p>{dataa.city}</p>
-        <h1>{dataa.temperature} C</h1>
+        <h1>{dataa.city}</h1>
+        <div className="row">
+        <div>
+        <h1>{dataa.temperature} <span>&#8451;</span> </h1>
         <h2>{dataa.weather}</h2>
-        <img src={`http://openweathermap.org/img/wn/${dataa.icon}@2x.png`}></img>
+        </div>
+        <div>
+        <img  src={`http://openweathermap.org/img/wn/${dataa.icon}@2x.png`}></img>
+        </div>
+        </div>
         <p>Humidity</p>
         <p>{dataa.humidity} %</p>
         <p>Wind speed</p>
         <p>{dataa.wind_speed} km/h</p>
-
-        <div>
-        {dataa.info.map(createEntry)}
-        </div> 
-        
+        <div class="alert alert-primary">
+        Please reload the page if it didn't update your location !
+        </div>
+        </div>
+        <a style={{lineHeight : "50px" , fontWeight: "bold" , color: "black"}} href="">Github : AmanB-2003</a>
         </div>
 
+            <div className="col-sm-8">
+                <Graph datalist={dataa.info} />
+
+                <div className="row" style={{ marginTop : "20px" , marginLeft : "40px"}}>
+                    {dataa.info.map(createEntry)}
+                </div>
+
+            </div>
+        
+        </div>
+        </div>
         }
     </div>
    
@@ -126,3 +150,5 @@ function Temp() {
 }
 
 export default Temp;
+
+export {expt} ;

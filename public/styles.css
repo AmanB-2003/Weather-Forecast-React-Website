@@ -6,8 +6,31 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  body{
+    width : 97vw ;
+   
+  }
   
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+  h1 span{
+    font-size: x-large;
+    font-weight: bold;
+    position: relative;
+    top: -6px
+  }
+
+  /* .Card{
+    background-color: blue;
+  } */
+
+  /* canvas{
+
+    width:1000px !important;
+    height:600px !important;
+  
+  } */
