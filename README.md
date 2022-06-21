@@ -1,17 +1,11 @@
-Weather-Forecast-React-Website
+## Weather-Forecast-React-Website 🌥🌧🌩🌤
 
 Live at https://amanb-2003.github.io/Weather-Forecast-React-Website/
 
+Features :
+- Fetch user's device position 🌏 (Feature works only if location access permission is given).
+- Display current weather including weather condition, temperature🌡 , humidity, wind speed💨 , and date and time
+- Visualization 📈📉 to display the temperature change, humidity change, and weather conditions of each day
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
