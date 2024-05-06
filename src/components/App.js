@@ -2,7 +2,7 @@
 //<img src={logo} className="App-logo" alt="logo" />
 import './App.css';
 import Temp from './Temp-now';
-import Graph from './Graph';
+// import Graph from './Graph';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import Chart, { registerables } from "chart.js/auto";          //version 3
+// import Chart, { registerables } from "chart.js/auto";          //version 3
 import { Line } from "react-chartjs-2";
-import {expt} from "./Temp-now";
+// import {expt} from "./Temp-now";
 
   
   export default function Graph(props) {

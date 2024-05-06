@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Card from "./Card";
 import Graph from "./Graph";
-import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 
 let index = -2;       //can change value inside function  (global variable)
 let expt ;
